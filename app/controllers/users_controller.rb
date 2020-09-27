@@ -14,10 +14,14 @@ class UsersController < ApplicationController
         end
     end
 
+    def show 
+        # @museum = Museum.find_by(params[:id])
+    end
+
     private
 
     def user_parasm
-        parasm.require(@user).permit(:email, :user_name, :password)   
+        params.require(@user).permit(:email, :user_name, :password)   
     end
     
 end

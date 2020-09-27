@@ -8,5 +8,9 @@ class SessionsController < ApplicationController
 
     def create
     end
+
+    def destroy 
+         render :home
+    end
     
 end
